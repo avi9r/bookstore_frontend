@@ -1,10 +1,23 @@
 <template>
   <div id="app">
-    <header>
-      <nav>
-        <!-- <router-link to="/">Home</router-link> | -->
-        <router-link to="/login">Login</router-link> |
-        <router-link to="/register">Register</router-link>
+    <header style="margin-top: -60px;">
+      <!-- <router-link to="/">Home</router-link> | -->
+      <nav class="navbar" style="background-color: skyblue;">
+        <div v-if="$store.state.authToken" class="container">
+          <div class="logo">
+            <span>name:<span id="user-data">{{ $store.state.user.name }}</span> | email:<span
+                id="user-data">{{ $store.state.user.email }}</span></span>
+          </div>
+          <div class="menu">
+
+            <button id="logout-btn" @click="logoutUser">Logout</button>
+          </div>
+        </div>
+
+        <div v-else class="container">
+            <router-link to="/login"><button>Login</button></router-link> |
+            <router-link to="/register"><button>Register</button></router-link>
+        </div>
       </nav>
     </header>
 
@@ -25,6 +38,13 @@ export default {
     // RegistrationForm,
     // LoginForm,
     // HelloWorld
+  },
+  methods: {
+    logoutUser() {
+      this.$store.dispatch('logoutUser');
+      this.$router.push('/login');
+
+    }
   }
 }
 </script>
@@ -38,4 +58,11 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-</style>
+
+#logout-btn {
+  color: red;
+}
+
+#user-data {
+  color: blue;
+}</style>
