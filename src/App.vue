@@ -5,8 +5,13 @@
       <nav class="navbar" style="background-color: skyblue;">
         <div v-if="$store.state.authToken" class="container">
           <div class="logo">
+            <router-link to="/">Home</router-link> |
             <span>name:<span id="user-data">{{ $store.state.user.name }}</span> | email:<span
                 id="user-data">{{ $store.state.user.email }}</span></span>
+            <div v-if="$store.state.user.role == 'admin'" class="container">
+              <span>{{ $store.state.user.role }}</span> |
+              <router-link to="/add-book">Add Books</router-link>
+            </div>
           </div>
           <div class="menu">
 
@@ -65,4 +70,5 @@ export default {
 
 #user-data {
   color: blue;
-}</style>
+}
+</style>

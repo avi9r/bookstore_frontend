@@ -39,8 +39,8 @@ export default {
                 console.log('Registration successful:', response.data);
                 this.showSuccessMessage = true;
                 setTimeout(() => {
-                    this.$router.push('/login'); // Redirect to the login page
-                }, 2000);
+                    this.$router.push('/login'); 
+                }, 1000);
             } catch (error) {
                 console.error('Registration failed:', error);
                 this.errorMessage = 'Registration failed. Please try again.';

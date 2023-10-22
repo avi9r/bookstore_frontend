@@ -46,7 +46,7 @@ export default {
         this.$router.push('/');
             } catch (error) {
                 console.error('Login failed:', error);
-                this.errorMessage = 'Login failed. Please try again.';
+                this.errorMessage = 'Login failed:( Please check your password or Register';
 
             }
         }

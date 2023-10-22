@@ -4,6 +4,8 @@ import RegistrationForm from './components/RegistrationForm.vue';
 import LoginForm from './components/LoginForm.vue';
 import store from './components/store';
 import BookDetail from './components/BookDetail.vue';
+import AddBook from './components/AddBook.vue';
+import EditBook from './components/EditBook.vue';
 
 
 const routes = [
@@ -11,6 +13,10 @@ const routes = [
   { path: '/login', component: LoginForm },
   { path: '/register',component: RegistrationForm },
   { path: '/books/:id',name:'BookDetail',component: BookDetail,props: true,},
+  { path: '/add-book', component: AddBook },
+  { path: '/edit-book/:id',name:'EditBook',component: EditBook,props: true,},
+
+
 ];
 
 const router = createRouter({
