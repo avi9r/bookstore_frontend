@@ -1,5 +1,5 @@
 # frontend
-
+-- Pull frontend project inside laravel project(bookstore) directory
 ## Project setup
 ```
 npm install
