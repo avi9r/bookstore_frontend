@@ -6,8 +6,8 @@
         <div v-if="$store.state.authToken" class="container">
           <div class="logo">
             <router-link to="/">Home</router-link> |
-            <span>name:<span id="user-data">{{ $store.state.user.name }}</span> | email:<span
-                id="user-data">{{ $store.state.user.email }}</span></span>
+            <span>name:<span id="user-data">{{ $store.state.user.name }}</span> | email:<span id="user-data">{{
+              $store.state.user.email }}</span></span>
             <div v-if="$store.state.user.role == 'admin'" class="container">
               <span>{{ $store.state.user.role }}</span> |
               <router-link to="/add-book">Add Books</router-link>
@@ -20,8 +20,8 @@
         </div>
 
         <div v-else class="container">
-            <router-link to="/login"><button>Login</button></router-link> |
-            <router-link to="/register"><button>Register</button></router-link>
+          <router-link to="/login"><button>Login</button></router-link> |
+          <router-link to="/register"><button>Register</button></router-link>
         </div>
       </nav>
     </header>

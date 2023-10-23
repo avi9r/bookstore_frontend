@@ -45,16 +45,6 @@ export default {
                 });
     },
     methods: {
-        // fetchBookDetails(bookId) {
-        //     axios.get(`/api/books/${bookId}`)
-        //         .then(response => {
-        //             this.bookDetail = response.data;
-        //         })
-        //         .catch(error => {
-        //             console.error('Error fetching books:', error);
-        //         });
-            
-        // },
         purchase(){
             alert("Thank you for Shoping with us!")
         }

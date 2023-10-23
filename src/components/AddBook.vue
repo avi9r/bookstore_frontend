@@ -74,7 +74,7 @@ export default {
             formData.append('isbn', this.bookData.isbn);
             formData.append('genre', this.bookData.genre);
             formData.append('publisher', this.bookData.publisher);
-            formData.append('image', this.bookData.image); // Append the image file
+            formData.append('image', this.bookData.image); 
 
             try {
                 const response = await axios.post('/api/books', formData);
